@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Converter.Controller">
+   <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutY="29.0" prefHeight="25.0" prefWidth="102.0" text="Original Text:" />
+      <TextArea fx:id="orignalTextArea" layoutY="54.0" prefHeight="69.0" prefWidth="600.0" promptText="Input whatever you want to encode" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <HBox layoutX="185.0" layoutY="150.0" spacing="80.0">
+         <children>
+            <Button fx:id="encodeButton" layoutX="185.0" layoutY="150.0" mnemonicParsing="false" onAction="#onencodeButtonClicked" text="Encode" HBox.hgrow="ALWAYS" />
+            <Button fx:id="decodeButton" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" onAction="#ondecodeButtonClicked" text="Decode" />
+         </children>
+      </HBox>
+      <Label layoutY="179.0" prefHeight="25.0" prefWidth="102.0" text="Encoded Text:" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="0.0" />
+      <TextArea fx:id="encodedTextArea" layoutY="204.0" prefHeight="96.0" prefWidth="600.0" promptText="The encoded text  is in here" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
