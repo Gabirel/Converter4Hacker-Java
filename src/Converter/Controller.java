@@ -7,9 +7,9 @@ import javafx.scene.control.TextArea;
 
 
 public class Controller {
-    @FXML
+    @FXML           //fx:id="orignalTextArea"
     private TextArea orignalTextArea;
-    @FXML
+    @FXML           //fx:id="encodedTextArea"
     private TextArea encodedTextArea;
 
     @FXML
@@ -21,13 +21,13 @@ public class Controller {
     //When "Encode" Button Clicked
     @FXML
     public void onencodeButtonClicked(ActionEvent actionEvent){
-        encodedTextArea.setText("I'm Enocded: " + orignalTextArea.getText());
+        encodedTextArea.setText(orignalTextArea.getText());
     }
 
     //When "Decode" Button Clicked
     @FXML
     public void ondecodeButtonClicked(ActionEvent actionEvent){
-        orignalTextArea.setText("I'm Decoded: " + encodedTextArea.getText());
+        orignalTextArea.setText(encodedTextArea.getText());
     }
 
 }
