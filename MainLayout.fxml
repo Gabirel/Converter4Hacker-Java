@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Converter.Controller">
+    <children>
+        <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="closeMenu" mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="clearMenu" mnemonicParsing="false" onAction="#clearMenuOnClicked" text="Clear all" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="aboutMenu" mnemonicParsing="false" onAction="#aboutMenuOnClicked" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox layoutY="29.0">
+            <children>
+                <Label layoutY="29.0" prefHeight="25.0" prefWidth="102.0" text="Original Text:" />
+                <Button fx:id="originalTextAreaUpperButton" layoutX="92.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="UpperCase" />
+                <Button fx:id="originalTextAreaLowerButton" mnemonicParsing="false" text="LowerCase">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            </children>
+        </HBox>
+        <TextArea fx:id="originalTextArea" layoutY="54.0" prefHeight="69.0" prefWidth="600.0" promptText="Input whatever you want to encode" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextArea>
+        <HBox layoutX="185.0" layoutY="150.0" spacing="80.0" />
+        <HBox layoutY="202.0">
+            <children>
+                <Label layoutY="179.0" prefHeight="25.0" prefWidth="102.0" text="Encoded Text:" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="0.0" />
+                <Button fx:id="encodedTextAreaButton" disable="true" layoutX="100.0" layoutY="202.0" mnemonicParsing="false" text="LowerCase" />
+            </children>
+        </HBox>
+        <TextArea fx:id="encodedTextArea" layoutY="204.0" prefHeight="95.0" prefWidth="603.0" promptText="The encoded text  is in here" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <HBox layoutY="162.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+            <children>
+                <ChoiceBox fx:id="encodeChoiceBox" layoutX="92.0" layoutY="150.0" prefHeight="25.0" prefWidth="184.0" value="-- Encode Reversible --" HBox.hgrow="ALWAYS">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="-- Encode Reversible --" />
+                            <String fx:value="Base64 Encode" />
+                            <String fx:value="URL(Base64-Style) Encode" />
+                            <String fx:value="URL Encode" />
+                            <String fx:value="-- Encode One-way --" />
+                            <String fx:value="MD5(32) Encode" />
+                            <String fx:value="MD5(16) Encode" />
+                            <String fx:value="SHA-1 Encode" />
+                            <String fx:value="SHA-224 Encode" />
+                            <String fx:value="SHA-256 Encode" />
+                            <String fx:value="SHA-384 Encode" />
+                            <String fx:value="SHA-512 Encode" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            <Button fx:id="EncodeAgainButton" mnemonicParsing="false" onAction="#EncodeAgainButtonOnClicked" text="Encode Again" />
+                <ChoiceBox fx:id="decodeChoiceBox" layoutX="329.0" layoutY="150.0" prefWidth="165.0" value="-- Decode --" HBox.hgrow="ALWAYS">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="-- Decode --" />
+                            <String fx:value="Base64 Decode" />
+                            <String fx:value="URL(Base64-Style) Decode" />
+                            <String fx:value="URL Decode" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            <Button fx:id="DecodeAgainButton" mnemonicParsing="false" onAction="#DecodeAgainButtonOnClicked" prefHeight="25.0" prefWidth="111.0" text="Decode Again" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

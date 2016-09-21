@@ -12,8 +12,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainLayout.fxml"));
+
         primaryStage.setTitle("Converter For Hacker");
-        primaryStage.setScene(new Scene(root, 600, 300));
+        primaryStage.setScene(new Scene(root, 603, 323));
         primaryStage.show();
     }
 
