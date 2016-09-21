@@ -1,2 +1,9 @@
 1.Import text from a file && Exporting
-2.New interfaces
+2.New layout structure. 
+    Looks like this:
+	- Root Layout
+		- Menu items
+		- Encode && Decode interface
+	- something else(Not decided yet)
+3.i18n
+4.Fix Menu items' EventAction(**Urgernt**)
