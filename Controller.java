@@ -192,7 +192,7 @@ public class Controller {
 
 
     @FXML
-    public void initialize(Stage primaryStage) {
+    public void initialize() {
 
 
         //OriginalTextAreaButtons Event
